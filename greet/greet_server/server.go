@@ -14,7 +14,7 @@ type server struct {}
 
 // type server struct {
 // 	greetpb.UnimplementedGreetServiceServer
-}
+// }
 
 type GreetServiceServer interface {
 	mustEmbedUnimplementedGreetServiceServer()
