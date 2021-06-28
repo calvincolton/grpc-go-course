@@ -8,12 +8,6 @@ import (
 	"google.golang.org/grpc"
 
 	"../greetpb"
-	// "Users/calvincolton/repositories/go/grpc-go-course/greet/greetpb"
-	// "/Users/calvincolton/repositories/go/grpc-go-course/greet/greetpb"
-	// "greet/greetpb"
-	// "../../greet/greetpb"
-	// "github.com/calvincolton/grpc-go-course/greet/greetpb"
-	// "github.com/simplestpath/grpc-go-course/greet/greetpb"
 )
 
 type server struct {}
