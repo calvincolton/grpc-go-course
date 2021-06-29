@@ -18,6 +18,7 @@ type server struct {}
 // }
 
 func (*server) Greet(ctx context.Context, req *greetpb.GreetRequest) (*greetpb.GreetResponse, error) {
+	fmt.Printf("Greet function was invoked with %v\n", req)
 	firstName := req.GetGreeting().GetFirstNam()
 	result := "Hello " + firstName
 	res := &greetpb.GreetResponse{
@@ -31,7 +32,7 @@ type GreetServiceServer interface {
 }
 
 func main() {
-	fmt.Println("Hello world")
+	fmt.Println("Greet Server")
 
 	lis, err := net.Listen("tcp", "0.0.0.0:50051")
 	if err != nil {
