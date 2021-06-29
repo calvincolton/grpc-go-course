@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"net"
@@ -15,6 +16,15 @@ type server struct {}
 // type server struct {
 // 	greetpb.UnimplementedGreetServiceServer
 // }
+
+func (*server) Greet(ctx context.Context, req *greetpb.GreetRequest) (*greetpb.GreetResponse, error) {
+	firstName := req.GetGreeting().GetFirstNam()
+	result := "Hello " + firstName
+	res := &greetpb.GreetResponse{
+		Result: result,
+	}
+	return res, nil
+}
 
 type GreetServiceServer interface {
 	mustEmbedUnimplementedGreetServiceServer()
