@@ -1,3 +1,5 @@
+package main
+
 import (
 	"fmt"
 	"log"
@@ -35,6 +37,6 @@ func doUnary(c calculatorpb.CalculatorServiceClient) {
 	if err != nil {
 		log.FatalF("error while calling sum RPC: %v", err)
 	}
-	
+
 	log.Printf("Response from Sum: %v", res.SumResult)
 }
